@@ -7,12 +7,19 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
   /* background-color: orange; */
 `;
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
   background-color: #fff7f7;
+  /* background-color: #ff99cc; */
+  :hover {
+    background-color: #ff99cc;
+    /* background-color: #00ffff; */
+    
+  }
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -32,23 +39,28 @@ const Wrapper = styled.div`
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
-  
+  background-color: #f5fafd;
   display: flex;
   align-items: center;
 `;
 const ImgContainer = styled.div`
- height: 100%;
+  height: 100%;
+  width: 100%;
+  /* margin-left: 90px; */
+  margin-top: 2px;
   flex: 1;
 `;
- const Image = styled.image`
-    height: 80px;
-    width: 100px;
-    flex:1;
+const Image = styled.img`
+  height: 80%;
+  width: 100%;
 `;
 const InfoContainer = styled.div`
-   flex: 1;
+  /* flex: 1; */
   padding: 50px;
 `;
+const Title = styled.h1``;
+const Desc = styled.p``;
+const Button = styled.button``;
 
 const Slider = () => {
   return (
@@ -57,13 +69,11 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-          <Slide>
+        <Slide>
           <ImgContainer>
-            <Image src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
-        </ImgContainer>
-        <InfoContainer></InfoContainer>
-          </Slide>
-        
+            <Image src="https://www.gulahmedshop.com/media/wysiwyg/01_22_03_03_wb_1.jpg" />
+          </ImgContainer>
+        </Slide>
       </Wrapper>
       <Arrow direction="right">
         <ArrowRightOutlined />

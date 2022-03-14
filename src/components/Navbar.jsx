@@ -5,6 +5,8 @@ import { Badge } from "@material-ui/core";
 
 const Container = styled.div`
   height: 60px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  border: 1px;
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
