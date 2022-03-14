@@ -48,6 +48,7 @@ const MenuItem = styled.div`
   font-size: 14;
   cursor: pointer;
   margin-left: 25px;
+  align-items: center;
 `;
 
 const Navbar = () => {

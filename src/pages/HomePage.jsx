@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Announcement from "../components/Announcement";
+import Navbar from "../components/Navbar";
+import Slider from "../components/Slider";
 
 function HomePage() {
   return (
-    <h1>HomePage</h1>
-  )
+    <>
+      <Announcement />
+      <Navbar />
+      <Slider />
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;
