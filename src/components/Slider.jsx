@@ -1,13 +1,14 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import {sliderItems} from '../data';
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background-color: orange; */
 `;
 const Arrow = styled.div`
@@ -18,7 +19,6 @@ const Arrow = styled.div`
   :hover {
     background-color: #ff99cc;
     /* background-color: #00ffff; */
-    
   }
   border-radius: 50%;
   align-items: center;
@@ -32,9 +32,13 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   margin: auto;
   opacity: 0.5;
+  z-index: 2;
 `;
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
+  transition: all 1.5s ease;
+  transform: translateX(${props=>props.sliderIndex * -100}vw);
 `;
 const Slide = styled.div`
   width: 100vw;
@@ -63,19 +67,31 @@ const Desc = styled.p``;
 const Button = styled.button``;
 
 const Slider = () => {
+  const [sliderIndex, setSliderIndex] = useState(0);
+  const handle = (direction) => {
+  if(direction==="left"){
+    setSliderIndex(sliderIndex>0?sliderIndex-1:4);
+  }
+  if(direction==="right"){
+    setSliderIndex(sliderIndex<4?sliderIndex+1:0);
+  }
+  };
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handle("left")}>
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
-        <Slide>
+      <Wrapper sliderIndex={sliderIndex}>
+        {sliderItems.map(items=>(
+          <Slide>
           <ImgContainer>
-            <Image src="https://www.gulahmedshop.com/media/wysiwyg/01_22_03_03_wb_1.jpg" />
+            <Image src={items.img} />
           </ImgContainer>
         </Slide>
+        ))}
       </Wrapper>
-      <Arrow direction="right">
+
+      <Arrow direction="right" onClick={() => handle("right")}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
