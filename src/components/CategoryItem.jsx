@@ -30,6 +30,15 @@ const Title =styled.h1`
 `
 const Button =styled.button`
     cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    color: gray;
+    :hover{
+        background-color: black;
+        color: white;
+    }
 `
 
 

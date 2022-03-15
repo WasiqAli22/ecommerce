@@ -63,7 +63,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>WASIQ.</Logo>
+          <Logo>Outfitnest</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
