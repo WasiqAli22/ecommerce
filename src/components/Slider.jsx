@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* background-color: orange; */
 `;
 const Arrow = styled.div`
@@ -58,13 +58,7 @@ const Image = styled.img`
   height: 80%;
   width: 100%;
 `;
-const InfoContainer = styled.div`
-  /* flex: 1; */
-  padding: 50px;
-`;
-const Title = styled.h1``;
-const Desc = styled.p``;
-const Button = styled.button``;
+
 
 const Slider = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -83,7 +77,7 @@ const Slider = () => {
       </Arrow>
       <Wrapper sliderIndex={sliderIndex}>
         {sliderItems.map(items=>(
-          <Slide>
+          <Slide key={items.id}>
           <ImgContainer>
             <Image src={items.img} />
           </ImgContainer>
