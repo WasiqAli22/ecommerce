@@ -5,7 +5,7 @@ import {sliderItems} from '../data';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -64,10 +64,10 @@ const Slider = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
   const handle = (direction) => {
   if(direction==="left"){
-    setSliderIndex(sliderIndex>0?sliderIndex-1:4);
+    setSliderIndex(sliderIndex>0?sliderIndex-1:5);
   }
   if(direction==="right"){
-    setSliderIndex(sliderIndex<4?sliderIndex+1:0);
+    setSliderIndex(sliderIndex<5?sliderIndex+1:0);
   }
   };
   return (

@@ -1,8 +1,13 @@
 import React from 'react'
+import  styled  from 'styled-components'
 
-const CategoryItem = () => {
+const Container=styled.div` 
+align-items: center;
+`;
+
+const CategoryItem = ({item}) => {
   return (
-    <div>CategoryItem</div>
+    <Container>HELLO</Container>
   )
 }
 

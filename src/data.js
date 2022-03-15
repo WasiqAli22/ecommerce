@@ -25,6 +25,11 @@ export const sliderItems = [
         bg: "fbf0f4",
     },
     
+    {
+        id: 6,
+        img: "https://www.gulahmedshop.com/media/wysiwyg/05_22_02_26_wb.jpg",
+        bg: "fbf0f4",
+    },
   ];
 
   export const categories = [
