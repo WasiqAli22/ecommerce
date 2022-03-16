@@ -2,6 +2,22 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@m
 import React from 'react'
 import  styled  from 'styled-components'
 
+const Info=styled.div`
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgb(0,0,0,0.2);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.5s ease;
+    cursor: pointer;
+`;
+
 const Container=styled.div`
     flex: 1;
     margin: 5px;
@@ -12,6 +28,9 @@ const Container=styled.div`
     align-items: center;
     background-color: #f5fbfd;
     position: relative;
+    &:hover ${Info}{
+        opacity: 1;
+    }
     `;
 
 const Circle=styled.img`
@@ -27,20 +46,21 @@ const Image=styled.img`
 
 `;
 
-const Info=styled.div`
-    width: 100%;
-    height: 100%;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: gray;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-`;
+
 const Icon=styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center; 
+    background-color: white;
+    display: flex;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: #e9f5f5;
+        transform: scale(1.4);
+    }
 `;
 
 const Product = ({item}) => {
