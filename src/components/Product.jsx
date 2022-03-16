@@ -12,15 +12,33 @@ const Container=styled.div`
     align-items: center;
     background-color: #f5fbfd;
     position: relative;
-`;
+    `;
 
 const Circle=styled.img`
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
 `;
 const Image=styled.img`
     height:75% ;
+    z-index: 2;
+
 `;
 
 const Info=styled.div`
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 `;
 const Icon=styled.div`
 `;
