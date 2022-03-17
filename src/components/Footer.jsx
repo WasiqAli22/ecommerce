@@ -59,11 +59,12 @@ const Right = styled.div`
   flex: 1;
   padding: 20px;
 `;
-const ContactItem = styled.li`
+const ContactItem = styled.div`
     /* width: 50%; */
-    margin-bottom: 20px;
-    list-style: none;
+    margin-bottom: 20px;    
     display: flex;
+    align-items: center;
+
  
 `
 const Title = styled.h3`
@@ -105,7 +106,7 @@ const Footer = () => {
       </Center>
       <Right>
           <Title>Contact</Title>
-           <ContactItem> <Room style={{marginRight:"10px"}} /> Khayaban-e-Sehar Shahbaz Com&#39;l D.H.A. Sindh, Karachi, Pakistan</ContactItem> 
+           <ContactItem> <Room style={{marginRight:"10px"}} /> Khayaban-e-Sehar Shahbaz D.H.A. Sindh, Karachi, Pakistan</ContactItem> 
            <ContactItem> <Phone style={{marginRight:"10px"}}/>+92 3162920921</ContactItem> 
            <ContactItem> <MailOutline style={{marginRight:"10px"}}/>wasiq@gmail.com</ContactItem> 
             <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
