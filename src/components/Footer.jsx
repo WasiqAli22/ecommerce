@@ -43,13 +43,6 @@ const Center = styled.div`
   flex: 1;
   padding: 20px;
 `;
-const Right = styled.div`
-  flex: 1;
-  padding: 20px;
-`;
-const Title = styled.h3`
-    margin-bottom: 30px;
-`
 const List = styled.ul`
     margin: 0;
     padding: 0;
@@ -58,6 +51,26 @@ const List = styled.ul`
     flex-wrap: wrap;
 `
 const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+`
+
+const Right = styled.div`
+  flex: 1;
+  padding: 20px;
+`;
+const ContactItem = styled.li`
+    /* width: 50%; */
+    margin-bottom: 20px;
+    list-style: none;
+    display: flex;
+ 
+`
+const Title = styled.h3`
+    margin-bottom: 30px;
+`
+const Payment = styled.img`
+    cursor: pointer;
     width: 50%;
 `
 
@@ -90,7 +103,14 @@ const Footer = () => {
           <ListItem>Terms</ListItem>
           </List>
       </Center>
-      <Right></Right>
+      <Right>
+          <Title>Contact</Title>
+           <ContactItem> <Room style={{marginRight:"10px"}} /> Khayaban-e-Sehar Shahbaz Com&#39;l D.H.A. Sindh, Karachi, Pakistan</ContactItem> 
+           <ContactItem> <Phone style={{marginRight:"10px"}}/>+92 3162920921</ContactItem> 
+           <ContactItem> <MailOutline style={{marginRight:"10px"}}/>wasiq@gmail.com</ContactItem> 
+            <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
+           
+      </Right>
     </Container>
   );
 };
