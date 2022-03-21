@@ -7,27 +7,73 @@ import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 
 const Container = styled.div``;
-const Title = styled.h1`margin: 20px;`;
+const Title = styled.h1`
+  margin: 20px;
+`;
 const FilterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    `;
-const Filter = styled.div`margin: 20px;`;
+  display: flex;
+  justify-content: space-between;
+`;
+const Filter = styled.div`
+  margin: 20px;
+  display: flex;
+  align-items: center;
+`;
+const FilterText = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 20px;
+`;
+const Select = styled.select`
+  padding: 10px;
+  margin-right: 20px;
+`;
+const Option = styled.option`
+  /* padding: 10px; */
+`;
 
 const ProductList = () => {
   return (
-    <>
+    <Container>
       <Navbar />
       <Announcement />
       <Title>Dresses</Title>
       <FilterContainer>
-        <Filter>Filter1</Filter>
-        <Filter>Filter2</Filter>
+        <Filter>
+          <FilterText>Filter Products : </FilterText>
+          <Select>
+            <Option disabled selected>
+              Color
+            </Option>
+            <Option>Red</Option>
+            <Option>Black</Option>
+            <Option>Blue</Option>
+          </Select>
+          <Select>
+            <Option disabled selected>
+              Size
+            </Option>
+            <Option>XL</Option>
+            <Option>L</Option>
+            <Option>M</Option>
+            <Option>S</Option>
+          </Select>
+        </Filter>
+        <Filter>
+          <FilterText>Sort Products :</FilterText>
+          <Select>
+            <Option disabled selected>
+              Newest
+            </Option>
+            <Option>Price High</Option>
+            <Option>Price Low</Option>
+          </Select>
+        </Filter>
       </FilterContainer>
-      <Products/>
-      <Newsletter/> 
-      <Footer/>
-    </>
+      <Products />
+      <Newsletter />
+      <Footer />
+    </Container>
   );
 };
 
