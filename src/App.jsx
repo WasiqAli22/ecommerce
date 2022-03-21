@@ -1,12 +1,11 @@
 import HomePage from "./pages/HomePage";
+import ProductDetail from "./pages/ProductDetail";
 import ProductList from "./pages/ProductList";
 
 function App() {
   return (
     <div>
-      <ProductList/>
-      
-      {/* <HomePage/> */}
+      <ProductDetail/>
     </div>
   );
 }
