@@ -242,10 +242,10 @@ const Cart = () => {
             </SummaryItem>
             <Button>CHECKOUT NOW</Button>
           </Summary>
-        </Bottom>
-      </Wrapper>
-      <Footer />
-    </Container>
+        </Bottom> 
+      </Wrapper>        
+      <Footer />                          
+  </Container>
   );
 };
 
